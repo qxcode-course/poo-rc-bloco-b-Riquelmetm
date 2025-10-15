@@ -12,3 +12,12 @@
 2025-10-15 01:13:39, EXEC, v:1, k:poo@camisa, mode:FREE
 2025-10-15 01:14:01, MOVE, v:1, k:poo@camisa, mode:PICK
 2025-10-15 01:14:02, EXEC, v:1, k:poo@camisa, mode:LOCK, rate:0
+2025-10-15 02:49:26, MOVE, v:1, k:poo@chinela, mode:PICK
+2025-10-15 02:49:27, EXEC, v:1, k:poo@chinela, mode:LOCK, rate:0, size:24
+2025-10-15 02:49:36, EXEC, v:1, k:poo@chinela, mode:LOCK, rate:0, size:24
+2025-10-15 02:49:42, EXEC, v:1, k:poo@chinela, mode:FREE
+2025-10-15 02:57:26, MOVE, v:1, k:poo@chinela, mode:BACK
+2025-10-15 02:57:28, MOVE, v:1, k:poo@chinela, mode:PICK
+2025-10-15 02:57:28, EXEC, v:1, k:poo@chinela, mode:LOCK, rate:0, size:25
+2025-10-15 02:57:28, EXEC, v:1, k:poo@chinela, mode:LOCK, rate:0, size:25
+2025-10-15 02:57:29, MOVE, v:1, k:poo@chinela, mode:BACK

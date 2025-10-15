@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-15_02-49-27",
+            "content": "@@ -26,25 +26,24 @@\n init__(self)\n-:\n %0A        sel\n",
+            "lines": "24"
+        },
+        {
+            "label": "2025-10-15_02-49-36",
+            "content": "@@ -329,32 +329,54 @@\n tamanho = valor%0A\n+                break%0A\n             else\n@@ -369,32 +369,32 @@\n           else:%0A\n-\n                 \n@@ -472,77 +472,8 @@\n or)%0A\n-                    self.__tamanho = valor%0A                else:%0A    \n     \n@@ -512,25 +512,24 @@\n e tamanho: %22\n-,\n valor - 1 ,%22\n@@ -526,21 +526,19 @@\n lor - 1 \n-,\n %22:%22\n-,\n valor)%0A \n@@ -556,34 +556,13 @@\n     \n-    self.__tamanho = valor\n+break\n %0A   \n@@ -832,25 +832,25 @@\n nho%22, chinel\n-o\n+a\n .getTamanho(\n",
+            "lines": "24"
+        }
+    ]
+}
