@@ -7,8 +7,13 @@
         },
         {
             "label": "2025-10-15_01-11-22",
-            "content": "class Camisa:\n    def __init__(self): # isso \u00e9 o construtor em python\n        self.__tamanho: str = \"\" # atributos em python com __ na frente s\u00e3o privados\n\n    def getTamanho(self) -> str: # m\u00e9todos em python tem self como primeiro atributo\n        return self.__tamanho\n\n    def setTamanho(self, valor: str):\n        if valor != \"P\" and valor != \"PP\" and valor != \"M\" and valor != \"G\" and valor != \"GG\" and valor != \"XG\":\n            print(\"Valores permitidos: PP, P, M, G, GG, XG.\")\n        else:\n            self.__tamanho = valor\n\n\n# loop principal\nroupa = Camisa() # crian1do roupa com valor tamanho padr\u00e3o\nwhile roupa.getTamanho() == \"\": # mantendo usu\u00e1rio no loop\n    print(\"Digite seu tamanho de roupa\")\n    tamanho: str = input()\n        print(\"$\" + line)\n        args: list[str] = tamanho.split(\" \")\n    roupa.setTamanho(tamanho) # tentando atribuir e disparando erros\n\nprint(\"Parabens, voc\u00ea comprou uma roupa tamanho\", roupa.getTamanho())",
+            "content": "@@ -732,16 +732,46 @@\n input()%0A\n+        print(%22$%22 + line)%0A    \n     args\n",
             "lines": "24"
+        },
+        {
+            "label": "2025-10-15_01-13-37",
+            "content": "class Camisa:\n    def __init__(self): # isso \u00e9 o construtor em python\n        self.__tamanho: str = \"\" # atributos em python com __ na frente s\u00e3o privados\n\n    def getTamanho(self) -> str: # m\u00e9todos em python tem self como primeiro atributo\n        return self.__tamanho\n\n    def setTamanho(self, valor: str):\n        if valor != \"P\" and valor != \"PP\" and valor != \"M\" and valor != \"G\" and valor != \"GG\" and valor != \"XG\":\n            print(\"Valores permitidos: PP, P, M, G, GG, XG.\")\n        else:\n            self.__tamanho = valor\n\n\n# loop principal\nroupa = Camisa() # crian1do roupa com valor tamanho padr\u00e3o\nwhile roupa.getTamanho() == \"\": # mantendo usu\u00e1rio no loop\n    print(\"Digite seu tamanho de roupa\")\n    tamanho: str = input()\n    args: list[str] = tamanho.split(\" \")\n    roupa.setTamanho(tamanho) # tentando atribuir e disparando erros\n\nprint(\"Parabens, voc\u00ea comprou uma roupa tamanho\", roupa.getTamanho())",
+            "lines": "23"
         }
     ]
 }

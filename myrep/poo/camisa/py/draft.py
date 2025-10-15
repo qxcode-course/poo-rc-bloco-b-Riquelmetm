@@ -17,8 +17,7 @@ roupa = Camisa() # crian1do roupa com valor tamanho padrão
 while roupa.getTamanho() == "": # mantendo usuário no loop
     print("Digite seu tamanho de roupa")
     tamanho: str = input()
-        print("$" + line)
-        args: list[str] = tamanho.split(" ")
+    args: list[str] = tamanho.split(" ")
     roupa.setTamanho(tamanho) # tentando atribuir e disparando erros
 
 print("Parabens, você comprou uma roupa tamanho", roupa.getTamanho())
