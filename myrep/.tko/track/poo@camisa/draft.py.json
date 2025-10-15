@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-15_00-41-54",
+            "content": "@@ -1,565 +1,84 @@\n-class Camisa:%0A    def __init__(self): # isso %C3%A9 o construtor em python%0A        self.__tamanho: str = %22%22 # atributos em python com __ na frente s%C3%A3o privados%0A%0A    def getTamanho(self) -%3E str: # m%C3%A9todos em python tem self como primeiro atributo%0A        return self.__tamanho%0A%0A    def setTamanho(self, valor: str):%0A        if valor != %22P%22 and valor != %22PP%22 and valor != %22M%22 and valor != %22G%22 and valor != %22GG%22 and valor != %22XG%22:%0A            print(%22Valores permitidos: PP, P, M, G, GG, XG.%22)%0A        else:%0A            self.__tamanho = valor%0A%0A%0A# loop principal%0A\n+@@ -495,16 +495,19 @@%0A rincipal%0A+tko%0A %250Aroupa =%0A@@ -507,21 +507,20 @@%0A \n roupa = \n Cami\n@@ -77,392 +77,28 @@\n a = \n+%0A-\n Camis\n-a() # crian1do roupa com valor tamanho padr%C3%A3o%0Awhile roupa.getTamanho() == %22%22: # mantendo usu%C3%A1rio no loop%0A    print(%22Digite seu tamanho de roupa%22)%0A    tamanho: str = input()%0A        print(%22$%22 + line)%0A        args: list%5Bstr%5D = tamanho.split(%22 %22)%0A    roupa.setTamanho(tamanho) # tentando atribuir e disparando erros%0A%0Aprint(%22Parabens, voc%C3%AA comprou uma roupa tamanho%22, roupa.getTamanho())\n+%0A+Roup%0A a() # cr%0A\n",
+            "lines": "9"
+        },
+        {
+            "label": "2025-10-15_01-11-22",
+            "content": "class Camisa:\n    def __init__(self): # isso \u00e9 o construtor em python\n        self.__tamanho: str = \"\" # atributos em python com __ na frente s\u00e3o privados\n\n    def getTamanho(self) -> str: # m\u00e9todos em python tem self como primeiro atributo\n        return self.__tamanho\n\n    def setTamanho(self, valor: str):\n        if valor != \"P\" and valor != \"PP\" and valor != \"M\" and valor != \"G\" and valor != \"GG\" and valor != \"XG\":\n            print(\"Valores permitidos: PP, P, M, G, GG, XG.\")\n        else:\n            self.__tamanho = valor\n\n\n# loop principal\nroupa = Camisa() # crian1do roupa com valor tamanho padr\u00e3o\nwhile roupa.getTamanho() == \"\": # mantendo usu\u00e1rio no loop\n    print(\"Digite seu tamanho de roupa\")\n    tamanho: str = input()\n        print(\"$\" + line)\n        args: list[str] = tamanho.split(\" \")\n    roupa.setTamanho(tamanho) # tentando atribuir e disparando erros\n\nprint(\"Parabens, voc\u00ea comprou uma roupa tamanho\", roupa.getTamanho())",
+            "lines": "24"
+        }
+    ]
+}
