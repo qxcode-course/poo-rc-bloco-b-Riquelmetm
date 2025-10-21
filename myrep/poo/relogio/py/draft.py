@@ -1,5 +1,5 @@
 class Watch:
-    def __init__(self, hora:int=0, minuto:int=0, segundo:int=0):
+    def __init__(self, hora: int = 0, minuto: int = 0, segundo: int = 0):
         self.__hora = 0
         self.__minuto = 0
         self.__segundo = 0
@@ -12,7 +12,7 @@ class Watch:
 
     def getHora(self):
         return self.__hora
-    
+
     def getMinuto(self):
         return self.__minuto
 
@@ -37,7 +37,7 @@ class Watch:
             return
         self.__segundo = segundo
 
-    def NextSecond(self):
+    def nextSecond(self):
         self.__segundo += 1
         if self.__segundo > 59:
             self.__segundo = 0
@@ -52,9 +52,10 @@ class Watch:
 def main():
     relogio = Watch()
     while True:
-        line: str = input()
+        line = input()
         print("$" + line)
-        args: list[str] = line.split()
+        args = line.split()
+
         if args[0] == "show":
             print(relogio)
 
@@ -65,7 +66,11 @@ def main():
             relogio.setSegundo(segundo)
 
         elif args[0] == "next":
-            relogio.NextSecond()
+            relogio.nextSecond()
+
+        elif args[0] == "init":
+            hora, minuto, segundo = map(int, args[1:])
+            relogio = Watch(hora, minuto, segundo)
 
         elif args[0] == "end":
             break

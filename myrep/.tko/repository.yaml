@@ -8,7 +8,7 @@ sources:
 - database: poo
   link: https://github.com/qxcodepoo/arcade/blob/master/Readme.md
   cache_path: /workspaces/poo-rc-bloco-b-Riquelmetm/myrep/.tko/cache/poo.md
-  cache_timestamp: '2025-10-21 13:43:40'
+  cache_timestamp: '2025-10-21 18:45:19'
   filters:
   - acesso
   - simples
@@ -18,7 +18,7 @@ expanded:
 - poo@bloco_b-agregação-simples
 tasks:
   poo@roupa: '{rate:100}'
-  poo@relogio: '{rate:76}'
+  poo@relogio: '{rate:100}'
 flags:
   quests: 0
   tracks: 0
