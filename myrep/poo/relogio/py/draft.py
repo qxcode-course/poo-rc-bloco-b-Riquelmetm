@@ -52,10 +52,9 @@ class Watch:
 def main():
     relogio = Watch()
     while True:
-        line = input()
-        print("$", line)
-        args = line.split()
-
+        line: str = input()
+        print("$" + line)
+        args: list[str] = line.split()
         if args[0] == "show":
             print(relogio)
 
