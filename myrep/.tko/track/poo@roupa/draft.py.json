@@ -1,0 +1,94 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-20_23-34-08",
+            "content": "@@ -664,16 +664,57 @@\n no loop%0A\n+    print(%22Digite seu tamanho de roupa%22)%0A\n     tama\n",
+            "lines": "22"
+        },
+        {
+            "label": "2025-10-20_23-34-29",
+            "content": "@@ -416,16 +416,78 @@\n = %22XG%22:%0A\n+            print(%22Valores permitidos: PP, P, M, G, GG, XG.%22)%0A\n         \n",
+            "lines": "21"
+        },
+        {
+            "label": "2025-10-20_23-34-45",
+            "content": "@@ -30,16 +30,48 @@\n _(self):\n+ # isso %C3%A9 o construtor em python\n %0A       \n@@ -99,42 +99,146 @@\n = %22%22\n-%0A%0A    def getTamanho(self) -%3E str:\n+ # atributos em python com __ na frente s%C3%A3o privados%0A%0A    def getTamanho(self) -%3E str: # m%C3%A9todos em python tem self como primeiro atributo\n %0A   \n@@ -428,327 +428,186 @@\n     \n-    print(%22Valores permitidos: PP, P, M, G, GG, XG.%22)%0A        else:%0A            self.__tamanho = valor%0A    %0A%0Aroupa = Camisa() %0Awhile True:%0A    line: str = input()%0A    print(%22$%22 + line)%0A    args: list%5Bstr%5D = line.split(%22 %22)%0A    if args%C2%B4%5B0%5D == %22show%22:%0A        print(%22size:%22roupa.getTamanho())%0A    if args%5B0%5D == size:%0A    \n+else:%0A            self.__tamanho = valor%0A%0A%0A# loop principal%0Aroupa = Camisa() # crian1do roupa com valor tamanho padr%C3%A3o%0Awhile roupa.getTamanho() == %22%22: # mantendo usu%C3%A1rio no loop%0A\n     \n@@ -633,20 +633,16 @@\n t()%0A    \n-  \n-  \n roupa.se\n@@ -658,25 +658,57 @@\n tamanho)\n-%0A        \n+ # tentando atribuir e disparando erros%0A%0A\n print(%22P\n@@ -772,58 +772,4 @@\n o())\n-%0A    if args%5B0%5D == %22end%22:%0A        break%0A    %0A        %0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2025-10-20_23-54-16",
+            "content": "@@ -514,32 +514,33 @@\n %22 %22)%0A    if args\n+%C2%B4\n %5B0%5D == %22show%22:%0A \n@@ -559,18 +559,16 @@\n (%22size:%22\n-, \n roupa.ge\n@@ -601,14 +601,12 @@\n  == \n-%22\n size\n-%22\n :%0A  \n",
+            "lines": "29"
+        },
+        {
+            "label": "2025-10-20_23-57-21",
+            "content": "@@ -557,17 +557,16 @@\n t(%22size:\n-(\n %22, roupa\n@@ -582,12 +582,8 @@\n ho()\n-,%22)%22\n )%0A  \n",
+            "lines": "29"
+        },
+        {
+            "label": "2025-10-20_23-57-49",
+            "content": "@@ -557,17 +557,16 @@\n t(%22size:\n- \n (%22, roup\n",
+            "lines": "29"
+        },
+        {
+            "label": "2025-10-20_23-58-30",
+            "content": "@@ -506,16 +506,19 @@\n e.split(\n+%22 %22\n )%0A    if\n@@ -586,13 +586,8 @@\n (),%22\n- v   \n )%22)%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2025-10-21_00-00-33",
+            "content": "@@ -579,16 +579,21 @@\n anho(),%22\n+ v   \n )%22)%0A    \n",
+            "lines": "29"
+        },
+        {
+            "label": "2025-10-21_00-00-41",
+            "content": "@@ -338,11 +338,9 @@\n , GG\n- ou\n+,\n  XG.\n",
+            "lines": "29"
+        },
+        {
+            "label": "2025-10-21_00-01-02",
+            "content": "@@ -583,15 +583,8 @@\n ho()\n-.trim()\n ,%22)%22\n",
+            "lines": "29"
+        },
+        {
+            "label": "2025-10-21_00-01-21",
+            "content": "@@ -584,13 +584,12 @@\n o().\n-s\n tri\n-p\n+m\n (),%22\n",
+            "lines": "29"
+        },
+        {
+            "label": "2025-10-21_00-01-31",
+            "content": "@@ -554,17 +554,16 @@\n int(\n-f\n %22size: (\n %7Brou\n@@ -562,9 +562,11 @@\n e: (\n-%7B\n+%22, \n roup\n@@ -583,9 +583,18 @@\n ho()\n-%7D\n+.strip(),%22\n )%22)%0A\n@@ -638,18 +638,23 @@\n anho\n- = args%5B1%5D\n+: str = input()\n %0A   \n",
+            "lines": "29"
+        },
+        {
+            "label": "2025-10-21_00-14-08",
+            "content": "@@ -677,43 +677,8 @@\n     \n-if args%5B0%5D == %22end%22:%0A        break%0A\n     \n@@ -747,16 +747,55 @@\n anho())%0A\n+    if args%5B0%5D == %22end%22:%0A        break%0A\n     %0A   \n",
+            "lines": "29"
+        },
+        {
+            "label": "2025-10-21_00-14-52",
+            "content": "@@ -708,16 +708,90 @@\n   break%0A\n+    print(%22Parabens, voc%C3%AA comprou uma roupa tamanho%22, roupa.getTamanho())%0A\n     %0A   \n",
+            "lines": "29"
+        },
+        {
+            "label": "2025-10-21_00-15-21",
+            "content": "@@ -340,16 +340,17 @@\n GG ou XG\n+.\n %22)%0A     \n",
+            "lines": "28"
+        },
+        {
+            "label": "2025-10-21_00-15-29",
+            "content": "@@ -311,23 +311,19 @@\n res \n-inv%C3%A1lido, tente\n+permitidos:\n  PP,\n",
+            "lines": "28"
+        },
+        {
+            "label": "2025-10-21_00-16-14",
+            "content": "@@ -303,19 +303,15 @@\n nt(%22\n-fail: \n Valor\n+es\n  inv\n",
+            "lines": "28"
+        },
+        {
+            "label": "2025-10-21_00-16-44",
+            "content": "class Camisa:\n    def __init__(self):\n        self.__tamanho: str = \"\"\n\n    def getTamanho(self) -> str:\n        return self.__tamanho\n\n    def setTamanho(self, valor: str):\n        if valor != \"P\" and valor != \"PP\" and valor != \"M\" and valor != \"G\" and valor != \"GG\" and valor != \"XG\":\n            print(\"fail: Valor inv\u00e1lido, tente PP, P, M, G, GG ou XG\")\n        else:\n            self.__tamanho = valor\n    \n\nroupa = Camisa() \nwhile True:\n    line: str = input()\n    print(\"$\" + line)\n    args: list[str] = line.split()\n    if args[0] == \"show\":\n        print(f\"size: ({roupa.getTamanho()})\")\n    if args[0] == \"size\":\n        tamanho = args[1]\n        roupa.setTamanho(tamanho)\n    if args[0] == \"end\":\n        break\n    \n        \n",
+            "lines": "28"
+        }
+    ]
+}
