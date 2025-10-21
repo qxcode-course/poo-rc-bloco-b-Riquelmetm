@@ -16,3 +16,9 @@
 2025-10-21 00:17:01, MOVE, v:1, k:poo@roupa, mode:BACK
 2025-10-21 00:17:01, MOVE, v:1, k:poo@roupa, mode:PICK
 2025-10-21 00:17:02, MOVE, v:1, k:poo@roupa, mode:BACK
+2025-10-21 00:18:06, MOVE, v:1, k:poo@roupa, mode:PICK
+2025-10-21 00:18:07, EXEC, v:1, k:poo@roupa, mode:FULL, rate:100
+2025-10-21 00:29:57, MOVE, v:1, k:poo@roupa, mode:BACK
+2025-10-21 00:30:11, MOVE, v:1, k:poo@chinela, mode:PICK
+2025-10-21 00:30:12, EXEC, v:1, k:poo@chinela, mode:LOCK, rate:0
+2025-10-21 00:30:22, MOVE, v:1, k:poo@chinela, mode:BACK

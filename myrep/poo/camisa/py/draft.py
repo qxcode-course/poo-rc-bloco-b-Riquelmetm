@@ -1,8 +1,8 @@
 class Camisa:
-    def __init__(self): # isso é o construtor em python
-        self.__tamanho: str = "" # atributos em python com __ na frente são privados
+    def __init__(self):
+        self.__tamanho: str = ""
 
-    def getTamanho(self) -> str: # métodos em python tem self como primeiro atributo
+    def getTamanho(self) -> str:
         return self.__tamanho
 
     def setTamanho(self, valor: str):
@@ -12,11 +12,9 @@ class Camisa:
             self.__tamanho = valor
 
 
-# loop principal
-roupa = Camisa() # crian1do roupa com valor tamanho padrão
-while roupa.getTamanho() == "": # mantendo usuário no loop
+roupa = Camisa() 
+while roupa.getTamanho() == "":
     print("Digite seu tamanho de roupa")
     tamanho: str = input()
-    roupa.setTamanho(tamanho) # tentando atribuir e disparando erros
-
+    roupa.setTamanho(tamanho) 
 print("Parabens, você comprou uma roupa tamanho", roupa.getTamanho())
