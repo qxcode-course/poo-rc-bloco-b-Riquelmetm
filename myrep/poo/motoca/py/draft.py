@@ -40,6 +40,24 @@ def buytime (self, time: int):
     self.tempo += tempo
 
 def drive (self, time: int):
+    if self.tempo ==0:
+        print("fail: buy time first")
+        self.tempo = 0
+        return
+    if self.pessoa is None:
+        print("fail: empty motorcycle")
+        return
+    if self.pessoa.getIdade() > 10:
+        print("fail: too old to drive")
+        return
+    if time > self.time:
+        time_driven = self.time
+        self.time = 0
+        print(f"fail: time finished after {time_driven} minutes")
+    else:
+        self.time -= time
+
+
 
 def main():
     moto = Moto()
