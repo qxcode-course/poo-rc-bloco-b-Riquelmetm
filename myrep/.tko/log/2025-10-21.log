@@ -39,3 +39,19 @@
 2025-10-21 18:57:04, EXEC, v:1, k:poo@relogio, mode:FULL, rate:76, size:74
 2025-10-21 19:02:29, EXEC, v:1, k:poo@relogio, mode:FULL, rate:100, size:79
 2025-10-21 19:02:50, MOVE, v:1, k:poo@relogio, mode:BACK
+2025-10-21 19:03:54, MOVE, v:1, k:poo@relogio, mode:PICK
+2025-10-21 19:03:56, EXEC, v:1, k:poo@relogio, mode:FREE
+2025-10-21 19:05:20, EXEC, v:1, k:poo@relogio, mode:FULL, rate:76, size:77
+2025-10-21 19:06:22, EXEC, v:1, k:poo@relogio, mode:FREE
+2025-10-21 19:07:22, EXEC, v:1, k:poo@relogio, mode:FULL, rate:100, size:79
+2025-10-21 19:07:24, EXEC, v:1, k:poo@relogio, mode:FREE
+2025-10-21 19:08:18, EXEC, v:1, k:poo@relogio, mode:FREE
+2025-10-21 19:14:01, EXEC, v:1, k:poo@relogio, mode:FULL, rate:7, size:78
+2025-10-21 19:17:56, EXEC, v:1, k:poo@relogio, mode:FULL, rate:100, size:79
+2025-10-21 19:18:36, EXEC, v:1, k:poo@relogio, mode:FULL, rate:100
+2025-10-21 19:18:37, EXEC, v:1, k:poo@relogio, mode:FULL, rate:100
+2025-10-21 19:18:38, MOVE, v:1, k:poo@relogio, mode:BACK
+2025-10-21 19:18:43, MOVE, v:1, k:poo@grafite, mode:DOWN
+2025-10-21 19:18:44, MOVE, v:1, k:poo@motouber, mode:DOWN
+2025-10-21 19:18:47, MOVE, v:1, k:poo@tamagotchi, mode:DOWN
+2025-10-21 19:18:48, MOVE, v:1, k:poo@charger, mode:DOWN
