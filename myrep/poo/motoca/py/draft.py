@@ -21,7 +21,7 @@ class Moto:
         self.tempo = 0
 
     def inserir(self, pessoa: Pessoa) -> bool:
-        if self.pessoa != None:
+        if self.pessoa is not None:
             print("fail: busy motorcycle")
             return False
 
@@ -35,7 +35,11 @@ def remover(self) -> Pessoa | None:
         
         aux = self.pessoa
         self.pessoa = None
-        return aux 
+        return aux
+def buytime (self, time: int):
+    self.tempo += tempo
+
+def drive (self, time: int):
 
 def main():
     moto = Moto()
