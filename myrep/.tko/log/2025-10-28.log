@@ -38,3 +38,7 @@
 2025-10-28 03:14:49, EXEC, v:1, k:poo@motoca, mode:LOCK, rate:0
 2025-10-28 03:15:19, EXEC, v:1, k:poo@motoca, mode:FULL, rate:100
 2025-10-28 03:16:01, MOVE, v:1, k:poo@motoca, mode:BACK
+2025-10-28 03:28:05, MOVE, v:1, k:poo@grafite, mode:PICK
+2025-10-28 04:12:47, MOVE, v:1, k:poo@grafite, mode:BACK
+2025-10-28 04:12:49, MOVE, v:1, k:poo@grafite, mode:PICK
+2025-10-28 04:12:51, MOVE, v:1, k:poo@grafite, mode:BACK
