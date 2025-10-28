@@ -79,8 +79,6 @@ def main():
         
         print(f"${linha}")
 
-        if not command:
-            continue
 
         op = command[0]
         
@@ -115,5 +113,4 @@ def main():
         else:
             print("fail: comando invalido")
 
-if __name__ == "__main__":
-    main()
+main()

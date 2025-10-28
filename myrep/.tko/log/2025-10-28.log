@@ -60,3 +60,6 @@
 2025-10-28 12:06:11, EXEC, v:1, k:poo@grafite, mode:FULL, rate:70, size:119
 2025-10-28 12:06:42, EXEC, v:1, k:poo@grafite, mode:FULL, rate:100, size:119
 2025-10-28 12:06:52, MOVE, v:1, k:poo@grafite, mode:BACK
+2025-10-28 12:08:07, MOVE, v:1, k:poo@grafite, mode:PICK
+2025-10-28 12:08:08, EXEC, v:1, k:poo@grafite, mode:FULL, rate:100, size:116
+2025-10-28 12:08:20, MOVE, v:1, k:poo@grafite, mode:BACK

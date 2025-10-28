@@ -24,6 +24,7 @@ tasks:
   poo@roupa: '{rate:100}'
   poo@relogio: '{rate:100}'
   poo@motoca: '{rate:100, iagen:Sim__}'
+  poo@grafite: '{rate:100}'
   poo@charger: '{rate:5}'
 flags:
   quests: 0
