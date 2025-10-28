@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-28_13-40-31",
+            "content": "@@ -260,17 +260,17 @@\n self.get\n-D\n+d\n in()%7D%22%0A%0A\n@@ -625,34 +625,32 @@\n  0%0A        self.\n-__\n motorista: Pesso\n@@ -642,31 +642,16 @@\n otorista\n-: Pessoa %7C None\n  = None%0A\n@@ -655,34 +655,32 @@\n ne%0A        self.\n-__\n passageiro: Pess\n@@ -677,23 +677,8 @@\n eiro\n-: Pessoa %7C None\n  = N\n@@ -754,110 +754,13 @@\n r: %7B\n-getmotorista()%7D: Passenger: %7Bgetpassageiro()%7D%22%0A    def subirmoto(self, pessoamoto):%0A        if \n self.\n-__\n moto\n@@ -768,313 +768,28 @@\n ista\n- is not None:%0A            print(%22fail: no driver%22)%0A            return%0A        self.__motorista = pessoamoto%0A%0A    def descermoto(self):%0A        if self.__motorista is None:%0A            print(%22fail: nao tem motorista%22)%0A        self.__motorista = None%0A%0A    def subirpass(self, passageiro):%0A        if \n+%7D: Passenger: %7B\n self.\n-__\n pass\n@@ -798,217 +798,18 @@\n eiro\n- is not None:%0A            print(%22fail: tem passageiro%22)%0A            return%0A        if self.__motorista is None:%0A            print(%22fail: no  driver%22)%0A%0A        self.__passageiro = passageiro%0A        self.custo = 0%0A\n+%7D%22%0A    %0A%0A%0A    \n",
+            "lines": "36"
+        },
+        {
+            "label": "2025-10-28_14-11-45",
+            "content": "class Pessoa:\n  def __init__(self, name, din):\n    self.__name = name\n    self.__din = din\n\n    def getName(self):\n        return f\"{self.__name}\"\n    def getDin(self):\n        return f\"{self.__din}\"\n\n    def __str__(self):\n        return f\"{self.getName()}:{self.getDin()}\"\n\n    def receber (self, dinheiro: int):\n        self.dinheiro += dinheiro\n\n    def gastar(self,dinheiro:int):\n        if dinheiro <= self.dinheiro:\n            self.dinheiro -= dinheiro\n        else:\n            pago = self.dinheiro\n            self.dinheiro = 0\n            return pago\n\n    \nclass Moto:\n    def __init__(self):\n        self.custo = 0\n        self.__motorista: Pessoa | None = None\n        self.__passageiro: Pessoa | None = None\n    def __str__(self):\n        return f\"Cost: {self.custo}: Driver: {getmotorista()}: Passenger: {getpassageiro()}\"\n    def subirmoto(self, pessoamoto):\n        if self.__motorista is not None:\n            print(\"fail: no driver\")\n            return\n        self.__motorista = pessoamoto\n\n    def descermoto(self):\n        if self.__motorista is None:\n            print(\"fail: nao tem motorista\")\n        self.__motorista = None\n\n    def subirpass(self, passageiro):\n        if self.__passageiro is not None:\n            print(\"fail: tem passageiro\")\n            return\n        if self.__motorista is None:\n            print(\"fail: no  driver\")\n\n        self.__passageiro = passageiro\n        self.custo = 0\n",
+            "lines": "52"
+        }
+    ]
+}

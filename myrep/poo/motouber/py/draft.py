@@ -9,7 +9,7 @@ class Pessoa:
         return f"{self.__din}"
 
     def __str__(self):
-        return f"{self.getName()}:{self.getdin()}"
+        return f"{self.getName()}:{self.getDin()}"
 
     def receber (self, dinheiro: int):
         self.dinheiro += dinheiro
@@ -26,11 +26,27 @@ class Pessoa:
 class Moto:
     def __init__(self):
         self.custo = 0
-        self.motorista = None
-        self.passageiro = None
+        self.__motorista: Pessoa | None = None
+        self.__passageiro: Pessoa | None = None
     def __str__(self):
-        return f"Cost: {self.custo}: Driver: {self.motorista}: Passenger: {self.passageiro}"
-    
+        return f"Cost: {self.custo}: Driver: {getmotorista()}: Passenger: {getpassageiro()}"
+    def subirmoto(self, pessoamoto):
+        if self.__motorista is not None:
+            print("fail: no driver")
+            return
+        self.__motorista = pessoamoto
 
+    def descermoto(self):
+        if self.__motorista is None:
+            print("fail: nao tem motorista")
+        self.__motorista = None
 
-    
+    def subirpass(self, passageiro):
+        if self.__passageiro is not None:
+            print("fail: tem passageiro")
+            return
+        if self.__motorista is None:
+            print("fail: no  driver")
+
+        self.__passageiro = passageiro
+        self.custo = 0
