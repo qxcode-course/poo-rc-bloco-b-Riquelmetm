@@ -12,7 +12,7 @@ sources:
   type: remote
   branch: master
   cache_path: /workspaces/poo-rc-bloco-b-Riquelmetm/myrep/.tko/cache/poo.md
-  cache_timestamp: '2025-10-28 13:39:06'
+  cache_timestamp: '2025-10-28 14:50:54'
   filters:
   - acesso
   - simples
@@ -25,6 +25,7 @@ tasks:
   poo@relogio: '{rate:100}'
   poo@motoca: '{rate:100, iagen:Sim__}'
   poo@grafite: '{rate:100}'
+  poo@motouber: '{rate:100}'
   poo@charger: '{rate:5}'
 flags:
   quests: 0
