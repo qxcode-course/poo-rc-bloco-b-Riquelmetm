@@ -84,4 +84,32 @@ class Moto:
         if self.__passageiro is not None:
             self.custo += km
     
+moto = Moto()
+while True:
+    line = input()
+    print("$" + line)
+    args = line.split()
+    op = args[0]
+    if op == "end":
+        break
+    elif op == "show":
+        print(moto)
+    elif op == "setDriver":
+        nome = args[10]
+        dinheiro = int(args[2])
+        motorista = Pessoa(nome, dinheiro)
+        moto.subirmoto(motorista)
+    elif op == "setPass":
+        nome = args[1]
+        dinheiro = int(args[2])
+        passageiro = Pessoa(nome, dinheiro)
+        moto.subirpass(passageiro)
 
+    elif op == "drive":
+        km = int(args[1])
+        moto.andar(km)
+    
+    elif op == "LeavePass":
+        moto.descerpass()
+    
+    else: print (f"fail: error invalid command")
