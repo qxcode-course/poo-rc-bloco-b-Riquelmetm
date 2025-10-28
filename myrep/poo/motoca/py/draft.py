@@ -1,86 +1,128 @@
-class Pessoa:
+class Person:
+  def __init__(self, name, age):
+    self.__name = name
+    self.__age = age
 
-    def __init__(self, nome: str, idade: int):
-        self.__nome = nome
-        self.__idade = idade  
+  def getName(self):
+    return self.__name
+
+  def getAge(self):
+    return self.__age
+
+  def setName(self, name):
+    self.__name = name
+
+  def setAge(self, age):
+    self.__age = age
+
+  def __str__(self):
+    return f"{self.getName()}:{self.getAge()}"
+  
+class Motorcycle:
+  def __init__(self, power: int = 1):
+    self.__power: int = power
+    self.__time: int = 0
+    self.__person: Person | None = None
+
+  def getPower(self) -> int:
+    return self.__power
+
+  def getTime(self) -> int:
+    return self.__time
+
+  def getPerson(self) -> Person | None:
+    return self.__person
+
+  def setPower(self, power: int):
+    self.__power = power
+
+  def setTime(self, time: int):
+    self.__time = time
+
+  def insertPerson(self, person: Person) -> bool:
+    if self.getPerson() is not None:
+      print("fail: busy motorcycle")
+      return False
+
+    self.__person = person
+    return True
     
+  def remove(self) -> Person | None:
+    if self.getPerson() is None:
+      print("fail: empty motorcycle")
+      return None
 
-    def __str__(self) -> str:
-        return f'{self.getName()}:{self.getIdade()}'
+    person = self.getPerson()
+    self.__person = None
+    return person
+  
+  def buyTime(self, time: int):
+    if time <= 0:
+      print("fail: invalid time")
+      return
 
-    def getName(self):
-        return self.__nome
+    self.setTime(self.getTime() + time)
+
+  def drive(self, time: int):
+    if self.getTime() <= 0:
+      print("fail: buy time first")
+      return
     
-    def getIdade(self):
-        return self.__idade
+    if self.getPerson() is None:
+      print("fail: empty motorcycle")
+      return
+
+    if self.getPerson().getAge() > 10:
+      print("fail: too old to drive")
+      return
     
-class Moto:
-    def __init__(self, nome: str):
-        self.pessoa: Pessoa | None = None
-        self.potencia = 1
-        self.tempo = 0
+    if time > self.getTime():
+      print(f"fail: time finished after {self.getTime()} minutes")
+      self.setTime(0)
+      return
 
-    def inserir(self, pessoa: Pessoa) -> bool:
-        if self.pessoa is not None:
-            print("fail: busy motorcycle")
-            return False
+    self.setTime(self.getTime() - time)
 
-        self.pessoa = pessoa
-        return True
+    if self.getTime() < 0:
+      self.setTime(0)
+      print(f"fail: time finished after {time} minutes")
 
-def remover(self) -> Pessoa | None:
-        if self.pessoa is None:
-            print("fail: empty motorcycle")
-            return None
-        
-        aux = self.pessoa
-        self.pessoa = None
-        return aux
-def buytime (self, time: int):
-    self.tempo += tempo
+  def honk(self):
+    print("P" + "e" * self.getPower() + "m")
 
-def drive (self, time: int):
-    if self.tempo ==0:
-        print("fail: buy time first")
-        self.tempo = 0
-        return
-    if self.pessoa is None:
-        print("fail: empty motorcycle")
-        return
-    if self.pessoa.getIdade() > 10:
-        print("fail: too old to drive")
-        return
-    if time > self.time:
-        time_driven = self.time
-        self.time = 0
-        print(f"fail: time finished after {time_driven} minutes")
-    else:
-        self.time -= time
+  def __str__(self):
+    person_str = self.getPerson() if self.getPerson() is not None else "empty"
+    return f"power:{str(self.getPower())}, time:{self.getTime()}, person:({self.getPerson() if self.getPerson() is not None else 'empty'})"
 
+moto = Motorcycle()
 
-
-def main():
-    moto = Moto()
-
-    while True:
-        line = input()
-        print("$" + line )
-        args= line.split("")
-        if args[0]=="end":
-            break
-        elif args[0]=="show":
-        elif args[0]=="init":
-        elif args[0]=="enter":
-        elif args[0]=="leave":
-        elif args[0]=="buy":
-        elif args[0]=="drive":
-        elif args[0]=="honk":
-
-
-
-main()
-# moto = Moto()
-# moto.inserir(Pessoa("fulano"))
-# print(moto.pessoa)
-
-
+while True:
+  command = input().split()
+  print(f"${' '.join(command)}")
+  
+  if command[0] == "end":
+    break
+  elif command[0] == "show":
+    print(moto)
+  elif command[0] == "enter":
+    name = command[1]
+    age = int(command[2])
+    person = Person(name, age)
+    moto.insertPerson(person)
+  elif command[0] == "leave":
+    removed = moto.remove()
+    if removed is not None:
+      print(removed)
+  elif command[0] == "buy":
+    time = int(command[1])
+    moto.buyTime(time)
+  elif command[0] == "drive":
+    time = int(command[1])
+    moto.drive(time)
+  elif command[0] == "honk":
+    moto.honk()
+  elif command[0] == "init":
+    power = int(command[1])
+    moto = Motorcycle(power)
+  else:
+    print("fail: invalid command")
